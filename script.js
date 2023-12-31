@@ -1,6 +1,7 @@
 const pageViews = document.querySelector('.price-header').querySelector('h4').querySelector('span')
 const requiredAmount = document.querySelector('.price-header').querySelector('h1')
 const slider = document.getElementById('slider').querySelector('input')
+const discount = document.querySelector('.discount')
 
 function changeValue(e) {
   if(e.target.value == 8) {
@@ -30,3 +31,9 @@ function changeValue(e) {
 }
 
 slider.addEventListener('input', changeValue)
+
+if(window.innerWidth <= 428) {
+  discount.innerText = '-25%'
+}
+
+

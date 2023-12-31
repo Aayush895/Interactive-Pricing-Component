@@ -31,25 +31,25 @@ main {
 }
 
 #header {
-  position: absolute;
-  top: 0;
+  position: relative;
+  top: 0rem;
   width: 100%;
-  padding: 12rem 0rem;
+  padding: 20rem 0rem;
   background-color: var(--very-pale-blue);
   border-bottom-left-radius: 10rem;
   z-index: 1;
 }
 
-#header > h1{
+#header > h1 {
   position: absolute;
-  top: 2rem;
+  top: 15rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
-#header > p  {
+#header > p {
   position: absolute;
-  top: 5rem;
+  top: 18rem;
   left: 50%;
   transform: translateX(-50%);
   color: var(--Grayish-Blue);
@@ -57,12 +57,14 @@ main {
 
 #circle-pattern {
   position: absolute;
-  top: 0.5rem;
+  top: 13rem;
   left: 50%;
   transform: translateX(-50%);
 }
 
 #price-component {
+  position: relative;
+  top: -15rem;
   box-shadow: -1px 0px 33px -6px rgba(217, 210, 217, 1);
   padding: 4rem 3rem;
   width: 35%;
@@ -198,4 +200,87 @@ button {
 
 button:hover {
   color: white;
+}
+
+@media (max-width: 834px) {
+  #header > h1 {
+    width: 100%;
+    text-align: center;
+  }
+
+  #price-component {
+    width: 55%;
+  }
+}
+
+@media (max-width: 428px) {
+  #header > h1 {
+    width: 100%;
+    text-align: center;
+    font-size: 1.7rem;
+  }
+
+  #header > p {
+    text-align: center;
+  }
+
+  #price-component {
+    width: 90%;
+    padding: 2rem 1rem;
+  }
+
+  .toggle-switch {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2.5rem;
+  }
+
+  .toggle-switch > p > span {
+    padding: 0 0.5rem;
+    margin: 0 0.5rem;
+  }
+
+  .switch {
+    position: relative;
+    display: inline-block;
+    width: 50px;
+    height: 30px;
+  }
+
+  .switch input:checked + .toggle::before {
+    transform: translateX(16px);
+  }
+
+  #features-container {
+    flex-direction: column;
+  }
+
+  .features {
+    text-align: center;
+  }
+
+  button {
+    margin-top: 2.5rem;
+  }
+}
+
+@media (max-width: 390px) {
+  #header {
+    top: 2rem;
+  }
+
+  #header > p {
+    width: 100%;
+  }
+}
+
+@media (max-width: 375px) {
+  #header {
+    top: 2.5rem;
+  }
+
+  #header > h1 {
+    font-size: 1.5rem;
+  }
 }
