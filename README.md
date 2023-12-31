@@ -35,7 +35,7 @@ Users should be able to:
 ### Links
 
 - Solution URL: [Github](https://github.com/Aayush895/Interactive-Pricing-Component)
-- Live Site URL: [Netlify]()
+- Live Site URL: [Netlify](https://interactive-slider-component.netlify.app/)
 
 ## My process
 
